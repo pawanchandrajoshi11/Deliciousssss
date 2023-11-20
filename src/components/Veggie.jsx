@@ -1,7 +1,7 @@
 import { data } from "../data";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import "./Popular.scss";
+// import "../css/Veggie.scss";
 
 const Veggie = () => {
   const [veggie, setVeggie] = useState([]);
@@ -21,19 +21,48 @@ const Veggie = () => {
   };
 
   return (
-    <motion.div className="carousel">
+    <motion.div
+      className="carousel"
+      style={{
+        minHeight: "18rem",
+        height: "30rem",
+        // backgroundColor: "green",
+        paddingBottom: "100px",
+      }}
+    >
       <h3>Our Vegetarian Picks</h3>
       <motion.div
         className="inner-carousel"
         drag="x"
         dragConstraints={{ right: 0, left: -1900 }}
         whileTap={{ cursor: "grabbing" }}
+        style={{ height: "30rem" }}
       >
         {veggie.map((recipe) => {
           return (
-            <motion.div className="item" key={recipe.id}>
+            <motion.div
+              className="item"
+              key={recipe.id}
+              style={{
+                // backgroundColor: "red",
+                display: "flex",
+                // alignItems: "center",
+                justifyContent: "center",
+                // minHeight: "18rem",
+                height: "20rem",
+                marginLeft: "-20px"
+              }}
+            >
               <p>{recipe.title}</p>
-              <img src={recipe.image} alt="" />
+              <img
+                style={{
+                  width: "80%",
+                  height: "100%",
+                  objectFit: "cover",
+                }}
+                src={recipe.image}
+                alt={recipe.title}
+              />
             </motion.div>
           );
         })}

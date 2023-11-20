@@ -7,19 +7,19 @@ import "./Category.scss";
 const Category = () => {
   return (
     <div className="list">
-      <NavLink to={"/cuisine/Italian"}>
+      <NavLink to={"/cuisine/Italian"} className="slink">
         <FaPizzaSlice />
         <h4>Italian</h4>
       </NavLink>
-      <NavLink to={"/cuisine/American"}>
+      <NavLink to={"/cuisine/American"} className="slink">
         <FaHamburger />
         <h4>American</h4>
       </NavLink>
-      <NavLink to={"/cuisine/Thai"}>
+      <NavLink to={"/cuisine/Thai"} className="slink">
         <GiNoodles />
         <h4>Thai</h4>
       </NavLink>
-      <NavLink to={"/cuisine/Japanese"}>
+      <NavLink to={"/cuisine/Japanese"} className="slink">
         <GiChopsticks />
         <h4>Japanese</h4>
       </NavLink>
